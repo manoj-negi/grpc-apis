@@ -1,0 +1,8 @@
+version: v1
+plugins:
+  - name: go
+    out: ./pb
+    opt: module=example.com/pb
+  - name: go-grpc
+    out: ./pb
+    opt: module=example.com/pb
