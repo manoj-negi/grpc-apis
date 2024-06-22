@@ -1,11 +1,15 @@
 syntax = "proto3";
-option go_package = "example.com/pb";
-package chat;
 
-message Message {
-    string body = 1;
+option go_package = "example.com/pb";
+
+service GreetingService {
+    rpc Greeting(GreetingServiceRequest) returns (GreetingServiceReply) {}
 }
 
-service ChatService{
-    rpc SayHello (Message) returns (Message) {};
+message GreetingServiceRequest {
+    string name = 1;
+}
+
+message GreetingServiceReply {
+    string message = 2;
 }

@@ -15,5 +15,5 @@ tasks:
   ptc:
     - protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:pb   
 
-  bufgenerate:
+  buf:
     - buf generate  
